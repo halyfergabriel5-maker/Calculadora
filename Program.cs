@@ -11,20 +11,19 @@ while(op != 0){
 
 
 
-    Console.WriteLine("digite a operação que deseja realizar:\n1)adição\n2)subtração\n3)multiplicação\n4)divisão\n");
+    Console.WriteLine("digite a operação que deseja realizar:\n1)adição\n2)subtração\n3)multiplicação\n4)divisão\n0)sair\n");
     //variavel op guarda o valor da operação escolhida.
     int valorD = int.Parse(Console.ReadLine()!);
 
     op = valorD;
 
-    if(op < 1 || op > 4){
+    if(op == 0){
+        {
+        Console.WriteLine("obrigado por usar o programa");
+        }
+    else if(op < 1 || op > 4){
         Console.WriteLine("digite um valor valido");
         }
-    else if(op == 0)
-    {
-        Console.WriteLine("obrigado por usar o programa");
-
-    }
     else{
         switch(op){
             case 1:
@@ -88,7 +87,7 @@ double divisao(){
   Console.WriteLine("digite os numeros que deseja realiazar a operação: ");
   num1 = Convert.ToDouble(Console.ReadLine());
   num2 = Convert.ToDouble(Console.ReadLine());
-  if(num1 == 0 || num2 == 0)
+  if(num2 == 0)
     {
         Console.WriteLine("divisões por zero não são permitidas");
         return 0;
